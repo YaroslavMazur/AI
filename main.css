@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"Calibri", 'Trebuchet MS', sans-serif ;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -5,22 +11,28 @@ body{
     justify-content: center;
 }
 
+:root{
+    --border-black:2px solid black;
+}
+
 canvas{
     margin: 20px;
-    border: 2px solid black;
+    border: var(--border-black);
     width: 300px;
     height: 300px;
 }
 
-.vectorBtn, .normBtn{
+.btn{
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
 
-    padding: 5px;
-    margin: 10px;
+    background-color: transparent;
+    border: var(--border-black);
 }
 
-.vectorP, .normP{
-    text-align: center;
-    max-width: calc(100% - 400px);
-    overflow-x: auto;
-    text-wrap: wrap;
+.btn:hover{
+    background-color: rgb(184, 184, 184);
 }
